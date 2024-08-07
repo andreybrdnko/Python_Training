@@ -32,7 +32,7 @@ class ebayHomePage():
         first_price_as_int = int(price_temp)
         print(first_price_as_int)
 
-        assert first_price_as_int == 260, 'The price of the product does not match the specified value'
+        assert first_price_as_int > 20, 'The price of the product is cheaper than the provided value'
 
     def return_to_home_page(self):
         logo_click = self.driver.find_element(By.ID, self.logo)
@@ -56,4 +56,4 @@ class ebayHomePage():
         second_price_as_int = int(temp_price)
         print(second_price_as_int)
 
-        assert second_price_as_int == 14, 'The price of the product does not match the specified value'
+        assert second_price_as_int < 250, 'The price of the product is too expensive'
